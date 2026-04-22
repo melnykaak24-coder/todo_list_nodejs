@@ -9,9 +9,15 @@
       <input type="text" name="newtask" placeholder="Введіть нове завдання">
       <button type="submit" title="Для додавання введеного нового завдання клацніть на цій кнопці"> Додати завдання </button>
       <h2> Додані завдання </h2>
+      <ul>
+        <% for( var i=0; i < task.length; i++){ %>
+          <li><input type="checkbox" name="check" value="<%= task[i] %>" />
+            <%= task[i] %>
+          </li>
+          <% } %>
+      </ul>
       <h2> Виконані завдання </h2>
     </form>
   </div>
 </body>
 </html>
-

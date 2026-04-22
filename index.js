@@ -1,15 +1,23 @@
-
-//Підключаємо залежність express
 var express = require("express");
-//Викликаємо express
+
 var app = express();
-//Налаштовуємо обробник шаблонів
+
+app.use(express.urlencoded({ extended: true }));
+
 app.set("view engine", "ejs");
-//Відображаємо index.ejs
+
+var task = ["Опанувати JavaScript", "Опанувати Node.js"];
+
 app.get("/", function (req, res) {
-    res.render("index");
+    res.render("index", { task: task });
 });
-//Налаштовуємо сервер для прослуховування порту 3000
+
+app.post("/addnewtask", function (req, res) {
+    var newTask = req.body.newtask;
+    task.push(newTask);
+    res.redirect("/");
+});
+
 app.listen(3000, function () {
     console.log("Сервер працює на порту 3000!");
 });
