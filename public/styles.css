@@ -1,0 +1,33 @@
+/* Підключаємо зовнішній шрифт "Roboto Mono" */
+@import url(
+"https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+* {
+    font-family: "Roboto Mono", monospace; /* Задаємо шрифт тексту */
+    font-weight: bold; /* Робимо шрифт жирним */
+    font-size: 16 px; /* Задаємо розмір тексту */
+}
+body {
+    background: silver; /* Задаємо колір фону */
+    color: black; /* Задаємо колір тексту */
+    margin-top: 20px; /* Задаємо зовнішній відступ зверху в пікселях */
+}
+.container {
+    display: block; /* Робимо елемент блочним */
+    width: 400px; /* Задаємо ширину елемента в пікселях */
+    margin: 0 auto; /* Задаємо вирівнювання по центру */
+}
+h1 {
+    font-size: 1.6rem; /* Задаємо розмір тексту заголовка h1 */
+}
+h2 {
+    font-size: 1.4rem; /* Задаємо розмір тексту заголовка h2 */
+}
+li {
+    list-style-type: none; /* Прибираємо маркери */
+    }
+ul {
+    margin-left: 0; /* Задаємо відступ зліва в браузері IE і Opera */
+    padding-left: 0; /* Задаємо відступ зліва в браузері Firefox, Safari, Chrome */
+}
+
+

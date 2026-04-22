@@ -16,7 +16,15 @@
           </li>
           <% } %>
       </ul>
+      <button formaction="/movetocompletetask" type="submit" title="Для виконання відмічених завдань клацніть на цій кнопці"> Виконати завдання </button>
       <h2> Виконані завдання </h2>
+      <ul>
+        <% for(var i=0; i < complete.length; i++){ %>
+          <li><input type="checkbox" checked>
+            <%= complete[i] %>
+          </li>
+          <% } %>
+      </ul>
     </form>
   </div>
 </body>
