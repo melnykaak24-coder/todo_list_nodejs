@@ -17,6 +17,7 @@ app.get("/", function (req, res) {
     });
 });
 
+app.use(express.static("public")); 
 // ДОДАТИ ЗАВДАННЯ
 app.post("/addnewtask", function (req, res) {
     var newTask = req.body.newtask;
